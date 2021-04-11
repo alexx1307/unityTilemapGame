@@ -1,0 +1,636 @@
+fileFormatVersion: 2
+guid: 7efaf6200e0c6a14fb752b6f08d36900
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5673755835288023210
+    second: UniqueRoadsWithoutTile_0
+  - first:
+      213: 4645771130247112483
+    second: UniqueRoadsWithoutTile_1
+  - first:
+      213: 3569718620145519958
+    second: UniqueRoadsWithoutTile_2
+  - first:
+      213: -2429400738909165942
+    second: UniqueRoadsWithoutTile_3
+  - first:
+      213: -1829125489580925647
+    second: UniqueRoadsWithoutTile_4
+  - first:
+      213: -4545967744647457590
+    second: UniqueRoadsWithoutTile_5
+  - first:
+      213: 7611599408670564711
+    second: UniqueRoadsWithoutTile_6
+  - first:
+      213: 9105495543657172196
+    second: UniqueRoadsWithoutTile_7
+  - first:
+      213: -4382519880410851622
+    second: UniqueRoadsWithoutTile_8
+  - first:
+      213: -2877457431112729503
+    second: UniqueRoadsWithoutTile_9
+  - first:
+      213: -815913660871062934
+    second: UniqueRoadsWithoutTile_10
+  - first:
+      213: -3586397326052470220
+    second: UniqueRoadsWithoutTile_11
+  - first:
+      213: 3211236285609877450
+    second: UniqueRoadsWithoutTile_12
+  - first:
+      213: -3018648244355483755
+    second: UniqueRoadsWithoutTile_13
+  - first:
+      213: -3704217082082903089
+    second: UniqueRoadsWithoutTile_14
+  - first:
+      213: 3153790466522239029
+    second: UniqueRoadsWithoutTile_15
+  - first:
+      213: -7949832109460638123
+    second: UniqueRoadsWithoutTile_16
+  - first:
+      213: -6896950332714259939
+    second: UniqueRoadsWithoutTile_17
+  - first:
+      213: -4955048819072487008
+    second: UniqueRoadsWithoutTile_18
+  - first:
+      213: 1172634801026353480
+    second: UniqueRoadsWithoutTile_19
+  - first:
+      213: 7577159655133604155
+    second: UniqueRoadsWithoutTile_20
+  - first:
+      213: 4049408055537345700
+    second: UniqueRoadsWithoutTile_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f8b5fe025c241b0800000000000000
+      internalID: -5673755835288023210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 256
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327e4268a38197040800000000000000
+      internalID: 4645771130247112483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 256
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d0fddfb203a8130800000000000000
+      internalID: 3569718620145519958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 256
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a866f3446e8094ed0800000000000000
+      internalID: -2429400738909165942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 256
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d9aefee04ad96e0800000000000000
+      internalID: -1829125489580925647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 256
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac497ebfb6a79e0c0800000000000000
+      internalID: -4545967744647457590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761e16e8555d1a960800000000000000
+      internalID: 7611599408670564711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_7
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 192
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec869734f73d5e70800000000000000
+      internalID: 9105495543657172196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_8
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 192
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6160b63692e23c0800000000000000
+      internalID: -4382519880410851622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cb73a36b73118d0800000000000000
+      internalID: -2877457431112729503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 128
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a446c29da4da4f0800000000000000
+      internalID: -815913660871062934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 128
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4325b3d22ae8a3ec0800000000000000
+      internalID: -3586397326052470220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_12
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 128
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf1f9d436a909c20800000000000000
+      internalID: 3211236285609877450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_13
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 128
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597b55d4a6b9b16d0800000000000000
+      internalID: -3018648244355483755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_14
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 128
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbb38b803af79cc0800000000000000
+      internalID: -3704217082082903089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530521548b384cb20800000000000000
+      internalID: 3153790466522239029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_16
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 64
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556ba9301d58ca190800000000000000
+      internalID: -7949832109460638123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 64
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1aed09c63c1940a0800000000000000
+      internalID: -6896950332714259939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_18
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 64
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1377e1a512c3bb0800000000000000
+      internalID: -4955048819072487008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_19
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 64
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849cf6e7329064010800000000000000
+      internalID: 1172634801026353480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39e8a29f8a772960800000000000000
+      internalID: 7577159655133604155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UniqueRoadsWithoutTile_21
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4a8ecfb23623830800000000000000
+      internalID: 4049408055537345700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
