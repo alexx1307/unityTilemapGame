@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class GridManager : MonoBehaviour
+public class BuilderManager : MonoBehaviour
 {
     // Start is called before the first frame update
     private Grid grid;
