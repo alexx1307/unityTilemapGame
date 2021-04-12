@@ -19,7 +19,6 @@ public class BuilderManager : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0)){
             Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(worldPoint);
             Vector3Int position = grid.WorldToCell(worldPoint);
             Debug.Log(position);
             tilemap.SetTile(position, tile);
