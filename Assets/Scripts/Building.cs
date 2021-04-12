@@ -10,5 +10,8 @@ public class Building : MonoBehaviour
 
     public TileBase Tile;
 
-    
+    public Resources buildingCost;
+    public Resources turnResourceChange;
+
+
 }

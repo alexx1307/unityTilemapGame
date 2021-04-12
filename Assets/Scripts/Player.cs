@@ -1,13 +1,40 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class Player{
-    public string name;
-    private int res1;
-    private int res2;
+    public Resources Resources{ get; private set; }
+
+    private Dictionary<Vector3Int, Building> possessions;
+
+    public string Name { get; private set; }
 
     public Player(string _name)
     {
-        this.name = _name;
-        this.res1 = 10;
+        this.Name = _name;
+        Resources = new Resources();
+        Resources.money = 1000;
+        Resources.steel = 5;
+        Resources.electricity = 5;
+        possessions = new Dictionary<Vector3Int, Building>();
+    
+    }
 
-      this.res2 = 10;  
+    internal void AddPossesion(Vector3Int position, Building buidling)
+    {
+        possessions[position] = buidling;
+    }
+
+    public void UpdateResources(Resources resourceChange)
+    {
+      Resources.Update(resourceChange);
+    }
+
+    public void UpdateResourcesOnTurnStart()
+    {
+        Resources.electricity = 0;
+        foreach(var item in possessions){
+          Resources.Update(item.Value.turnResourceChange);
+        }
     }
 }

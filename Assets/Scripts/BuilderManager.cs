@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class BuilderManager : MonoBehaviour
 {
+    public Transform buildButtonsPanel; 
     private Grid grid;
     private Building buidlingChosen = null;
 
@@ -30,6 +31,8 @@ public class BuilderManager : MonoBehaviour
             buildingButton.transform.SetParent(transform);
             buildingButton.GetComponent<Image>().sprite = building.Sprite;
             buildingButton.GetComponent<Button>().onClick.AddListener(() => PickBuilding(building));
+            buildingButton.transform.SetParent(buildButtonsPanel);
+            
         }
 
         hoverPlan = new GameObject();
@@ -67,14 +70,24 @@ public class BuilderManager : MonoBehaviour
             {
                 if (building == null)
                 {
-                    Debug.Log(position);
-                    buildingsTilemap.SetTile(position, buidlingChosen.Tile);
-                    lastHoverPos = null;
-                    buidlingChosen = null;
-                    hoverPlan.SetActive(false);
+                    PlaceBuilding(position);
                 }
             }
         }
+    }
+
+    private void PlaceBuilding(Vector3Int position)
+    {
+        Debug.Log(position);
+        buildingsTilemap.SetTile(position, buidlingChosen.Tile);
+        TurnManager turnManager = FindObjectOfType<TurnManager>();
+        Player currentPlayer = turnManager.CurrentPlayer;
+        currentPlayer.UpdateResources(buidlingChosen.buildingCost);
+        currentPlayer.AddPossesion(position, buidlingChosen);
+
+        lastHoverPos = null;
+        buidlingChosen = null;
+        hoverPlan.SetActive(false);
     }
 
     public void PickBuilding(Building building)
