@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class BuilderManager : MonoBehaviour
     private Grid grid;
     private Building buidlingChosen = null;
 
-    private GameObject hoverPlan;
+    private GameObject buildingPreview;
     private Vector3Int? lastHoverPos = null;
     public Tilemap buildingsTilemap;
 
@@ -35,9 +36,9 @@ public class BuilderManager : MonoBehaviour
             
         }
 
-        hoverPlan = new GameObject();
+        buildingPreview = new GameObject();
 
-        SpriteRenderer renderer = hoverPlan.AddComponent<SpriteRenderer>();
+        SpriteRenderer renderer = buildingPreview.AddComponent<SpriteRenderer>();
 
         renderer.color = new Color(1f,1f,1f,0.5f);
         renderer.sortingOrder = 1;
@@ -56,17 +57,17 @@ public class BuilderManager : MonoBehaviour
             if (!position.Equals(lastHoverPos))
             {
                 lastHoverPos = position;
-                audioSource.PlayOneShot(placeHoverSound);
+                //audioSource.PlayOneShot(placeHoverSound);
                 
                 if (building == null){
-                    hoverPlan.transform.position = grid.GetCellCenterWorld(position);
-                     hoverPlan.SetActive(true);
+                    buildingPreview.transform.position = grid.GetCellCenterWorld(position);
+                     buildingPreview.SetActive(true);
                 } else {
-                    hoverPlan.SetActive(false);
+                    buildingPreview.SetActive(false);
                 }
 
             }
-            if (Input.GetMouseButtonDown(0))
+            if (!EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
             {
                 if (building == null)
                 {
@@ -87,13 +88,13 @@ public class BuilderManager : MonoBehaviour
 
         lastHoverPos = null;
         buidlingChosen = null;
-        hoverPlan.SetActive(false);
+        buildingPreview.SetActive(false);
     }
 
     public void PickBuilding(Building building)
     {
         buidlingChosen = building;
-        hoverPlan.GetComponent<SpriteRenderer>().sprite = buidlingChosen.Sprite;
-        hoverPlan.SetActive(true);
+        buildingPreview.GetComponent<SpriteRenderer>().sprite = buidlingChosen.Sprite;
+        buildingPreview.SetActive(true);
     }
 }
