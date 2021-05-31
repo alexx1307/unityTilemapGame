@@ -1,17 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using UnityEngine.UI;
 
-public class Building : MonoBehaviour
-{
-    public Sprite Sprite;
-
-    public TileBase Tile;
-
-    public Resources buildingCost;
-    public Resources turnResourceChange;
+public class Building : MonoBehaviour, FocusHolder {
+    public BuildingType type;
+    public Vector3Int position;
+    public Player owner;
 
 
+    public FocusHolder DoActionOnClickAndRetrieveNextFocus(Vector3 mousePosition)
+    {
+        return null;
+    }
+
+    public FocusHolder DoActionOnHoverAndRetrieveNextFocus(Vector3 mousePosition)
+    {
+        return this;
+    }
+
+    public void GetFocus()
+    {
+        type.OnFocus(this);
+    }
+
+    public void LoseFocus()
+    {
+        type.OnLoseFocus();
+    }
 }

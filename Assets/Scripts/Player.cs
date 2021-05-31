@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player{
-    public Resources Resources{ get; private set; }
+    public GameResources Resources{ get; private set; }
 
     private Dictionary<Vector3Int, Building> possessions;
 
@@ -12,7 +12,7 @@ public class Player{
     public Player(string _name)
     {
         this.Name = _name;
-        Resources = new Resources();
+        Resources = new GameResources();
         Resources.money = 1000;
         Resources.steel = 5;
         Resources.electricity = 5;
@@ -20,12 +20,7 @@ public class Player{
     
     }
 
-    internal void AddPossesion(Vector3Int position, Building buidling)
-    {
-        possessions[position] = buidling;
-    }
-
-    public void UpdateResources(Resources resourceChange)
+    public void UpdateResources(GameResources resourceChange)
     {
       Resources.Update(resourceChange);
     }
@@ -33,8 +28,13 @@ public class Player{
     public void UpdateResourcesOnTurnStart()
     {
         Resources.electricity = 0;
-        foreach(var item in possessions){
-          Resources.Update(item.Value.turnResourceChange);
+        foreach(var building in getAllBuildingPossesions()){
+          Resources.Update(building.type.turnResourceChange);
         }
+    }
+
+    private List<Building> getAllBuildingPossesions()
+    {
+      return MapItemsManager.Instance.getAllBuildingByPlayer(this);
     }
 }

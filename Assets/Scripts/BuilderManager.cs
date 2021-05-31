@@ -5,11 +5,11 @@ using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
-public class BuilderManager : MonoBehaviour
+public class BuilderManager : MonoBehaviour, FocusHolder
 {
-    public Transform buildButtonsPanel; 
+    
     private Grid grid;
-    private Building buidlingChosen = null;
+    private BuildingType buidlingChosen = null;
 
     private GameObject buildingPreview;
     private Vector3Int? lastHoverPos = null;
@@ -18,23 +18,16 @@ public class BuilderManager : MonoBehaviour
     public AudioClip placeHoverSound;
     public AudioSource audioSource;
 
-    public GameObject buildButtonPrefab;
+    private Transform detailsPanel; 
+    private GameObject buildButtonPrefab;
 
-    public List<Building> possibleBuildings;
+    public List<BuildingType> possibleBuildings;
 
     // Start is called before the first frame update
     void Start()
     {
         grid = buildingsTilemap.GetComponentInParent<Grid>();
-        foreach (Building building in possibleBuildings)
-        {
-            GameObject buildingButton = Instantiate(buildButtonPrefab);
-            buildingButton.transform.SetParent(transform);
-            buildingButton.GetComponent<Image>().sprite = building.Sprite;
-            buildingButton.GetComponent<Button>().onClick.AddListener(() => PickBuilding(building));
-            buildingButton.transform.SetParent(buildButtonsPanel);
-            
-        }
+
 
         buildingPreview = new GameObject();
 
@@ -42,16 +35,45 @@ public class BuilderManager : MonoBehaviour
 
         renderer.color = new Color(1f,1f,1f,0.5f);
         renderer.sortingOrder = 1;
+
+        detailsPanel = GameObject.Find("DetailsPanel").transform;
+        buildButtonPrefab = (GameObject)Resources.Load("Prefabs/buildButton", typeof(GameObject));;
     }
 
-    // Update is called once per frame
-    void Update()
+     private void PlaceBuilding(Vector3Int position)
+    {
+        Debug.Log(position);
+        buildingsTilemap.SetTile(position, buidlingChosen.Tile);
+        TurnManager turnManager = FindObjectOfType<TurnManager>();
+        Player currentPlayer = turnManager.CurrentPlayer;
+        currentPlayer.UpdateResources(buidlingChosen.buildingCost);
+
+        GameObject go = new GameObject("building");
+        Building building = go.AddComponent<Building>();
+        building.type = buidlingChosen;
+        building.position = position;
+        building.owner = currentPlayer;
+        MapItemsManager.Instance.AddBuilding(building);
+
+        lastHoverPos = null;
+        buidlingChosen = null;
+        buildingPreview.SetActive(false);
+    }
+
+    public void PickBuilding(BuildingType building)
+    {
+        buidlingChosen = building;
+        buildingPreview.GetComponent<SpriteRenderer>().sprite = buidlingChosen.Sprite;
+        buildingPreview.SetActive(true);
+    }
+
+    public FocusHolder DoActionOnHoverAndRetrieveNextFocus(Vector3 mousePosition)
     {
         if (buidlingChosen != null)
         {
             Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPoint.z = 0;
             Vector3Int position = grid.WorldToCell(worldPoint);
-            position.z = 0;
             
             TileBase building = buildingsTilemap.GetTile(position);
             if (!position.Equals(lastHoverPos))
@@ -67,7 +89,20 @@ public class BuilderManager : MonoBehaviour
                 }
 
             }
-            if (!EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
+        }
+        return this;
+    }
+
+    public FocusHolder DoActionOnClickAndRetrieveNextFocus(Vector3 mousePosition)
+    {
+        if (buidlingChosen != null)
+        {
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPoint.z = 0;
+            Vector3Int position = grid.WorldToCell(worldPoint);
+            
+            TileBase building = buildingsTilemap.GetTile(position);
+            if (!EventSystem.current.IsPointerOverGameObject() )
             {
                 if (building == null)
                 {
@@ -75,26 +110,26 @@ public class BuilderManager : MonoBehaviour
                 }
             }
         }
+        return null;
     }
 
-    private void PlaceBuilding(Vector3Int position)
+    public void LoseFocus()
     {
-        Debug.Log(position);
-        buildingsTilemap.SetTile(position, buidlingChosen.Tile);
-        TurnManager turnManager = FindObjectOfType<TurnManager>();
-        Player currentPlayer = turnManager.CurrentPlayer;
-        currentPlayer.UpdateResources(buidlingChosen.buildingCost);
-        currentPlayer.AddPossesion(position, buidlingChosen);
-
-        lastHoverPos = null;
-        buidlingChosen = null;
-        buildingPreview.SetActive(false);
+         foreach (Transform child in detailsPanel) {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 
-    public void PickBuilding(Building building)
+    public void GetFocus()
     {
-        buidlingChosen = building;
-        buildingPreview.GetComponent<SpriteRenderer>().sprite = buidlingChosen.Sprite;
-        buildingPreview.SetActive(true);
+        foreach (BuildingType building in possibleBuildings)
+        {
+            GameObject buildingButton = Instantiate(buildButtonPrefab);
+            buildingButton.transform.SetParent(transform);
+            buildingButton.GetComponent<Image>().sprite = building.Sprite;
+            buildingButton.GetComponent<Button>().onClick.AddListener(() => PickBuilding(building));
+            buildingButton.transform.SetParent(detailsPanel);
+            
+        }
     }
 }
